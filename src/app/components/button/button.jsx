@@ -21,7 +21,6 @@ export const Button = ({
   handleChange = null,
 }) => {
   const [position, setPosition] = useState("");
-  const [imgCase, setImgCase] = useState("");
   const [img, setImg] = useState();
 
   if (disableShadow !== "") {
@@ -35,13 +34,11 @@ export const Button = ({
   useEffect(() => {
     if (startIcon !== "") {
       setPosition("startIcon");
-      setImgCase(startIcon);
     }
     if (endIcon !== "") {
       setPosition("endIcon");
-      setImgCase(endIcon);
     }
-  }, []);
+  }, [startIcon, endIcon]);
 
   useEffect(() => {
     switch (startIcon || endIcon) {
@@ -64,7 +61,7 @@ export const Button = ({
       default:
         break;
     }
-  }, []);
+  }, [startIcon, endIcon]);
 
   return (
     <button
