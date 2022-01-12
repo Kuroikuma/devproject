@@ -19,6 +19,15 @@ export const Page = () => {
       <Button endIcon="buy" variant="text" color="primary">
         primary
       </Button>
+      <Button endIcon="send" variant="text" color="danger">
+        primary
+      </Button>
+      <Button endIcon="donate" variant="text" color="secondary">
+        danger
+      </Button>
+      <Button endIcon="delete" variant="outline" color="default">
+        secondary
+      </Button>
     </div>
   );
 };
