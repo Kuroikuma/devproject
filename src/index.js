@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Page } from "./app/page/page";
+import { IndexRoutes } from "./app/router/index.routes";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Page />
+    <IndexRoutes />
   </React.StrictMode>,
   document.getElementById("root")
 );

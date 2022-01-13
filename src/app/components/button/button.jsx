@@ -17,18 +17,17 @@ export const Button = ({
   name = "",
   children,
   disableShadow = "",
-  disabled = "",
+  disabled,
   handleChange = null,
 }) => {
+    console.log(disabled)
   const [position, setPosition] = useState("");
   const [img, setImg] = useState();
 
   if (disableShadow !== "") {
     disableShadow = "disableShadow";
   }
-  if (disabled !== "") {
-    disabled = "disabled";
-  }
+
   if (startIcon !== "" || endIcon !== "") {
   }
   useEffect(() => {
@@ -67,9 +66,10 @@ export const Button = ({
     <button
       name={name}
       title={title}
+      disabled={disabled}
       onClick={handleChange}
       id={id}
-      className={`buttonDefault ${variant} ${disableShadow} ${disabled} ${position} ${size} ${color}`}
+      className={`buttonDefault ${variant} ${disableShadow} ${position} ${size} ${color}`}
     >
       <p> {children} </p>
       <img src={img} alt="" />
