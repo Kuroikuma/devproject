@@ -49,7 +49,7 @@ export const Input = (props) => {
     if (fullWidth) {
       setFullWidthC("fullWidth");
     }
-  }, [error, focus, hover]);
+  }, [error, focus, hover, fullWidth]);
 
   return (
     <div
@@ -83,7 +83,7 @@ export const Input = (props) => {
         />
       )}
 
-      {helperText == "" ? null : <p>{helperText}</p>}
+      {helperText === "" ? null : <p>{helperText}</p>}
     </div>
   );
 };
